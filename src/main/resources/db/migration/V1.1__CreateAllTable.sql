@@ -47,8 +47,8 @@ CREATE TABLE developer_project(
 develop_id BIGINT NOT NULL,
 project_id BIGINT NOT NULL,
 PRIMARY KEY (develop_id, project_id),
-FOREIGN KEY (develop_id) REFERENCES developer(id),
-FOREIGN KEY (project_id) REFERENCES project(id)
+FOREIGN KEY (develop_id) REFERENCES developer(id) ON DELETE CASCADE,
+FOREIGN KEY (project_id) REFERENCES project(id) ON DELETE CASCADE
 );
 
 
@@ -56,7 +56,7 @@ CREATE TABLE developer_skills(
 dev_id BIGINT NOT NULL,
 skills_id BIGINT NOT NULL,
 PRIMARY KEY (dev_id, skills_id),
-FOREIGN KEY (dev_id) REFERENCES developer(id),
-FOREIGN KEY (skills_id) REFERENCES skills(id)
+FOREIGN KEY (dev_id) REFERENCES developer(id) ON DELETE CASCADE,
+FOREIGN KEY (skills_id) REFERENCES skills(id) ON DELETE CASCADE
 );
 

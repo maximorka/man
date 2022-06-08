@@ -1,11 +1,11 @@
-import feature.dataBaseService.developer.Developer;
-import feature.dataBaseService.developer.DeveloperDao;
-import feature.dataBaseService.developerSkills.DeveloperSkillsDao;
-import feature.dataBaseService.developer_project.DeveloperProjectDao;
-import feature.dataBaseService.project.Project;
-import feature.dataBaseService.project.ProjectDao;
-import feature.dataBaseService.skills.Skills;
-import feature.dataBaseService.skills.SkillsDao;
+import feature.dataBaseService.developer.entity.Developer;
+import feature.dataBaseService.developer.dao.DeveloperDao;
+import feature.dataBaseService.developerSkills.dao.DeveloperSkillsDao;
+import feature.dataBaseService.developer_project.dao.DeveloperProjectDao;
+import feature.dataBaseService.project.entity.Project;
+import feature.dataBaseService.project.dao.ProjectDao;
+import feature.dataBaseService.skills.entity.Skills;
+import feature.dataBaseService.skills.dao.SkillsDao;
 import feature.prefs.Prefs;
 import feature.storage.DataBaseInit;
 import feature.storage.Storage;
@@ -33,6 +33,7 @@ public class App {
             System.out.println("DevelopersBySkills(\"Java\") = " + app.getDevelopersByTechnology("Java"));
             System.out.println("DevelopersByLevel(\"middle\") = " + app.getDevelopersByLevel("middle"));
             System.out.println("ProjectFormated() = " + app.getProjectFormated());
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
